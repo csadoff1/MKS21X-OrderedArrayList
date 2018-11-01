@@ -6,4 +6,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int startingCapacity) {
     super(startingCapacity);
   }
+  public void set(int i, T value) {
+
+  }
 }
