@@ -6,7 +6,14 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int startingCapacity) {
     super(startingCapacity);
   }
-  public void set(int i, T value) {
-
+  public T set(int i, T value) {
+    T oldVal = this.get(i);
+    if (value == null) {
+      throw new IllegalArgumentException("cannot set null value");
+    }
+    else {
+      super.set(i, value);
+    }
+    return oldVal;
   }
 }
