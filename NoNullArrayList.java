@@ -16,4 +16,13 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
     return oldVal;
   }
+  public boolean add(T value) {
+    if (value == null) {
+      throw new IllegalArgumentException("cannot set null value");
+    }
+    else {
+      super.add(value);
+    }
+    return true;
+  }
 }
