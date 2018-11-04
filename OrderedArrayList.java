@@ -19,4 +19,11 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
   }
 
+  public T set(int index, T value) {
+    T oldVal = this.get(index);
+    this.remove(index);
+    this.add(index, value);
+    return oldVal;
+  }
+
 }
